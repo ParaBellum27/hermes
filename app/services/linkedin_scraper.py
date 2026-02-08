@@ -92,12 +92,11 @@ class LinkedInScraperService:
 
     def _extract_posts_from_response(self, results: Any) -> List[ApiMaestroPost]:
         # Handle wrapped response format: [{ success, data: { posts } }]
-        if isinstance(results, list) and results and isinstance(results[0], dict) and 
-           results[0].get('success') and results[0].get('data') and results[0]['data'].get('posts'):
+        if isinstance(results, list) and results and isinstance(results[0], dict) and results[0].get('success') and results[0].get('data') and results[0]['data'].get('posts'):
             return [ApiMaestroPost(**p) for p in results[0]['data']['posts']]
         # Handle direct posts format: [{ urn, text, ... }, ...]
-        elif isinstance(results, list) and results and isinstance(results[0], dict) and 
-             (results[0].get('urn') or results[0].get('text')):
+        elif (isinstance(results, list) and results and isinstance(results[0], dict) and
+              (results[0].get('urn') or results[0].get('text'))):
             return [ApiMaestroPost(**p) for p in results]
         # Handle single response object (not array): { success, data: { posts } }
         elif isinstance(results, dict) and results.get('success') and results.get('data') and results['data'].get('posts'):
@@ -125,9 +124,9 @@ class LinkedInScraperService:
         author_name = f"{post.author.first_name or ''} {post.author.last_name or ''}".strip() if post.author else ""
         author_username = post.author.username if post.author else None
 
-        clean_profile_url = author_username 
-            and f"https://www.linkedin.com/in/{author_username}" 
-            or author_profile_url
+        clean_profile_url = (author_username
+            and f"https://www.linkedin.com/in/{author_username}"
+            or author_profile_url)
 
         if not clean_profile_url:
             return None

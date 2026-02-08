@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing import Dict, Any, List, Optional
 from app.repositories.user_data import UserDataRepository
 from app.supabase_client import supabase_service_client
 

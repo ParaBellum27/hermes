@@ -1,6 +1,7 @@
 from typing import List, Optional, Dict, Any
+from datetime import datetime
 from supabase import Client
-from app.models import UserPost, UserPostRow
+from app.models import UserPost
 
 class UserPostRepository:
     def __init__(self, supabase_client: Client):
