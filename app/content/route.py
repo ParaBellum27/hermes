@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, status, Depends, Query
 from typing import List
-from pyrewrite.models import ContentPost, AuthUser
-from pyrewrite.services.content import content_service
-from pyrewrite.dependencies import get_current_user
+from app.models import ContentPost, AuthUser
+from app.services.content import content_service
+from app.dependencies import get_current_user
 
 router = APIRouter()
 

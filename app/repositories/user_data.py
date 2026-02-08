@@ -1,6 +1,6 @@
 from typing import Dict, Any, Optional, List
 from supabase import Client
-from pyrewrite.models import UserDataRow
+from app.models import UserDataRow
 
 class UserDataRepository:
     def __init__(self, supabase_client: Client):

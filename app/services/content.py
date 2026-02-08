@@ -1,12 +1,12 @@
 import json
 from typing import List, Dict, Any, Optional
 from datetime import datetime
-from pyrewrite.models import ContentPost, CreatorContentWithProfile, PostStats, PostMedia, Article, CreatorProfile
-from pyrewrite.repositories.content import ContentRepository
-from pyrewrite.repositories.creator import CreatorRepository
-from pyrewrite.repositories.user_follow import UserFollowRepository
-from pyrewrite.supabase_client import supabase_service_client
-from pyrewrite.utils import format_post_title, format_time_ago, extract_name_from_url
+from app.models import ContentPost, CreatorContentWithProfile, PostStats, PostMedia, Article, CreatorProfile
+from app.repositories.content import ContentRepository
+from app.repositories.creator import CreatorRepository
+from app.repositories.user_follow import UserFollowRepository
+from app.supabase_client import supabase_service_client
+from app.utils import format_post_title, format_time_ago, extract_name_from_url
 
 class ContentService:
     def __init__(

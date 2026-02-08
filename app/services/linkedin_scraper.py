@@ -3,13 +3,13 @@ import re
 import json
 from typing import List, Dict, Any, Optional
 import httpx
-from pyrewrite.models import (
+from app.models import (
     ApiMaestroPost, ScrapeResult, CreatorProfile, CreatorContent, UserFollow
 )
-from pyrewrite.repositories.creator import CreatorRepository
-from pyrewrite.repositories.content import ContentRepository
-from pyrewrite.repositories.user_follow import UserFollowRepository
-from pyrewrite.supabase_client import supabase_service_client
+from app.repositories.creator import CreatorRepository
+from app.repositories.content import ContentRepository
+from app.repositories.user_follow import UserFollowRepository
+from app.supabase_client import supabase_service_client
 
 APIFY_ACTOR_ID = "apimaestro~linkedin-profile-posts"
 

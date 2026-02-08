@@ -1,7 +1,7 @@
 from fastapi import HTTPException, status, Request, Depends
 from typing import Optional
-from pyrewrite.models import AuthUser
-from pyrewrite.supabase_client import get_supabase_client
+from app.models import AuthUser
+from app.supabase_client import get_supabase_client
 from supabase import Client
 
 # This will need to be replaced with the actual project ref from Supabase

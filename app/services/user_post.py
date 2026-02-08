@@ -1,7 +1,7 @@
 from typing import List, Optional
-from pyrewrite.models import UserPost, CreateUserPostRequest, UpdateUserPostRequest
-from pyrewrite.repositories.user_post import UserPostRepository
-from pyrewrite.supabase_client import supabase_service_client
+from app.models import UserPost, CreateUserPostRequest, UpdateUserPostRequest
+from app.repositories.user_post import UserPostRepository
+from app.supabase_client import supabase_service_client
 
 class UserPostService:
     def __init__(self, repository: UserPostRepository):

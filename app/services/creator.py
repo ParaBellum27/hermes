@@ -1,8 +1,8 @@
 from typing import List, Dict, Any
-from pyrewrite.models import CreatorProfile, UserFollow
-from pyrewrite.repositories.creator import CreatorRepository
-from pyrewrite.repositories.user_follow import UserFollowRepository
-from pyrewrite.supabase_client import supabase_service_client
+from app.models import CreatorProfile, UserFollow
+from app.repositories.creator import CreatorRepository
+from app.repositories.user_follow import UserFollowRepository
+from app.supabase_client import supabase_service_client
 
 class CreatorService:
     def __init__(self, creator_repo: CreatorRepository, user_follow_repo: UserFollowRepository):

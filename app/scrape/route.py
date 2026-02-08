@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, status, Depends
 from typing import List, Dict, Any
-from pyrewrite.models import LinkedInScrapeRequest, ScrapeResult, AuthUser
-from pyrewrite.services.linkedin_scraper import linked_in_scraper_service
-from pyrewrite.dependencies import get_current_user
+from app.models import LinkedInScrapeRequest, ScrapeResult, AuthUser
+from app.services.linkedin_scraper import linked_in_scraper_service
+from app.dependencies import get_current_user
 import re
 
 router = APIRouter()

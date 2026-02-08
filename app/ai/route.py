@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, status, Depends
 from fastapi.responses import StreamingResponse
-from pyrewrite.models import AnalyzePostRequest, AnalysisResult, AuthUser, AskQuestionRequest, AskQuestionResponse, GenerateEditRequest, GenerateEditResponse, TextToSpeechRequest
-from pyrewrite.services.openai import openai_service
-from pyrewrite.dependencies import get_current_user
+from app.models import AnalyzePostRequest, AnalysisResult, AuthUser, AskQuestionRequest, AskQuestionResponse, GenerateEditRequest, GenerateEditResponse, TextToSpeechRequest
+from app.services.openai import openai_service
+from app.dependencies import get_current_user
 import io
 
 router = APIRouter()

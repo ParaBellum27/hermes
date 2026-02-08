@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, status, Depends
-from pyrewrite.models import ExtractFieldValueRequest, AuthUser
-from pyrewrite.services.openai import openai_service
-from pyrewrite.dependencies import get_current_user
+from app.models import ExtractFieldValueRequest, AuthUser
+from app.services.openai import openai_service
+from app.dependencies import get_current_user
 from typing import Dict, Any
 
 router = APIRouter()

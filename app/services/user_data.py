@@ -1,6 +1,6 @@
 from typing import Dict, Any, Optional
-from pyrewrite.repositories.user_data import UserDataRepository
-from pyrewrite.supabase_client import supabase_service_client
+from app.repositories.user_data import UserDataRepository
+from app.supabase_client import supabase_service_client
 
 class UserDataService:
     def __init__(self, user_data_repo: UserDataRepository):

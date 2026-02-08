@@ -3,7 +3,7 @@ import json
 from typing import Dict, Any, List, Optional, Literal
 import openai
 from openai import OpenAI
-from pyrewrite.models import Question, AnalysisResult, ConversationMessage, AskQuestionResponse, GenerateEditResponse
+from app.models import Question, AnalysisResult, ConversationMessage, AskQuestionResponse, GenerateEditResponse
 
 class OpenAIService:
     def __init__(self):

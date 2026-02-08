@@ -1,6 +1,6 @@
 from typing import List, Optional
 from supabase import Client
-from pyrewrite.models import CreatorContentWithProfile, CreatorContent, CreatorProfileForContent # Import the new models
+from app.models import CreatorContentWithProfile, CreatorContent, CreatorProfileForContent # Import the new models
 
 class ContentRepository:
     def __init__(self, supabase_client: Client):
