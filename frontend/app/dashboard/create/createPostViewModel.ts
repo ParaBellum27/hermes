@@ -36,7 +36,7 @@ export function useCreatePostViewModel() {
         // Fetch posts
         const postsRes = await fetch(`${process.env.NEXT_PUBLIC_PYTHON_API_BASE_URL}/api/content/fetch?limit=1000`);
         if (!postsRes.ok) throw new Error('Failed to fetch posts');
-        const { data: posts } = await postsRes.json();
+        const posts = await postsRes.json();
 
         // Fetch creators
         const creatorsUrl = user?.id
