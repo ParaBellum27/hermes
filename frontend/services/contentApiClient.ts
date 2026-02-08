@@ -1,5 +1,5 @@
 // services/contentApiClient.ts
-import { ContentPost } from "@/types/fastapi";
+import { ContentPost } from "@/types";
 
 const FASTAPI_BASE_URL = process.env.NEXT_PUBLIC_FASTAPI_BASE_URL || "http://localhost:8000";
 

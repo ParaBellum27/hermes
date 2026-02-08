@@ -1,7 +1,5 @@
 // types/fastapi.ts
 
-import { Literal } from "typescript";
-
 // Mirroring pyapp/models.py Pydantic models for FastAPI
 export interface AuthUser {
   id: string;

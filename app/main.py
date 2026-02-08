@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from app.creators import router as creators_router
 from app.ai.route import router as ai_router
 from app.content.route import router as content_router
@@ -9,6 +10,14 @@ from app.user_data.route import router as user_data_router
 from app.user_posts.route import router as user_posts_router
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(creators_router, prefix="/api/creators", tags=["creators"])
 app.include_router(ai_router, prefix="/api/ai", tags=["ai"])

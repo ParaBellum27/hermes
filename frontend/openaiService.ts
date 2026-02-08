@@ -1,6 +1,6 @@
 import OpenAI from "openai";
 import type { ProfileData } from "@/types";
-import { aiApiClient, AiApiClient } from "./aiApiClient";
+import { aiApiClient, AiApiClient } from "@/services/aiApiClient";
 import {
   AnalysisResult,
   AskQuestionRequest,
