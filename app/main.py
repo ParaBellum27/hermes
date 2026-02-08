@@ -1,59 +1,26 @@
-from dotenv import load_dotenv
-load_dotenv()
+from fastapi import FastAPI
+from pyrewrite.creators import router as creators_router
+from pyrewrite.ai.route import router as ai_router
+from pyrewrite.content.route import router as content_router
+from pyrewrite.extraction.route import router as extraction_router
+from pyrewrite.posts.route import router as posts_router
+from pyrewrite.scrape.route import router as scrape_router
+from pyrewrite.user_data.route import router as user_data_router
+from pyrewrite.user_posts.route import router as user_posts_router
 
-import os
-from fastapi import FastAPI, Request
-from fastapi.middleware.cors import CORSMiddleware
-import time
-from app.config import setup_logging, get_logger
-from fastapi.security import APIKeyHeader
+app = FastAPI()
 
-# Initialize logging
-setup_logging(log_level="INFO", log_to_file=True)
-logger = get_logger(__name__)
+app.include_router(creators_router, prefix="/api/creators", tags=["creators"])
+app.include_router(ai_router, prefix="/api/ai", tags=["ai"])
+app.include_router(content_router, prefix="/api/content", tags=["content"])
+app.include_router(extraction_router, prefix="/api/extract-field-value", tags=["extraction"])
+app.include_router(posts_router, prefix="/api/posts", tags=["posts"])
+app.include_router(scrape_router, prefix="/api/scrape", tags=["scrape"])
+app.include_router(user_data_router, prefix="/api/user-data", tags=["user_data"])
+app.include_router(user_posts_router, prefix="/api/user-posts", tags=["user_posts"])
 
-logger.info(f"Current working directory: {os.getcwd()}")
+@app.get("/")
+async def read_root():
+    return {"message": "Hello, FastAPI in pyrewrite!"}
 
-
-from app.routes import *
-
-
-# Add request logging middleware
-@app.middleware("http")
-async def log_requests(request: Request, call_next):
-    """Log all HTTP requests and responses"""
-    start_time = time.time()
-
-    # Log incoming request
-    logger.info(
-        f"Incoming request: {request.method} {request.url.path} - "
-        f"Client: {request.client.host if request.client else 'unknown'}"
-    )
-
-    # Process request
-    response = await call_next(request)
-
-    # Calculate request duration
-    duration = time.time() - start_time
-
-    # Log response
-    logger.info(
-        f"Completed request: {request.method} {request.url.path} - "
-        f"Status: {response.status_code} - Duration: {duration:.3f}s"
-    )
-
-    return response
-
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-app.include_router(people_search_router, prefix="/search", tags=["people_search"])
-
-if __name__ == "__main__":
-    app.run(debug=True)
+# TODO: Implement other API endpoints from the existing project.
