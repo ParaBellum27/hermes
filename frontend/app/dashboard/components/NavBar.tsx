@@ -60,7 +60,7 @@ export default function NavBar() {
         >
           <Image
             src="/logo.png"
-            alt="Muse logo"
+            alt="hermes logo"
             width={40}
             height={40}
             className="shrink-0 transition-transform duration-300 group-hover:scale-110"

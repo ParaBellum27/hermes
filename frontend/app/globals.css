@@ -8,8 +8,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-source-serif);
   --font-serif: var(--font-source-serif);
-  --color-muse: var(--muse);
-  --color-muse-hover: var(--muse-hover);
+  --color-hermes: var(--hermes);
+  --color-hermes-hover: var(--hermes-hover);
   --color-button-secondary: var(--button-secondary);
   --color-button-secondary-hover: var(--button-secondary-hover);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -55,8 +55,8 @@ body {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
-  --muse: #5578C8;
-  --muse-hover: #4A6AB8;
+  --hermes: #5578C8;
+  --hermes-hover: #4A6AB8;
   --button-secondary: #1F1F1F;
   --button-secondary-hover: #000000;
   --card: oklch(1 0 0);

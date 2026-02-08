@@ -275,7 +275,7 @@ const ContextPreview = () => (
       <div className="rounded-2xl border border-gray-100 bg-gray-50 p-3">
         <p className="text-[11px] uppercase tracking-wide text-gray-400 flex items-center gap-1">
           <MessageCircle className="w-3.5 h-3.5" />
-          Muse asks
+          hermes asks
         </p>
         <p className="text-sm text-gray-700 mt-1">What product are we promoting in this draft?</p>
       </div>
@@ -317,13 +317,13 @@ const steps: DocumentationStep[] = [
   {
     id: "profile",
     title: "Add your profile info",
-    summary: "Tell Muse who you are so every suggestion feels personal.",
+    summary: "Tell hermes who you are so every suggestion feels personal.",
     description:
       "Start with the Personal Info workspace. It tracks how many fields you have filled, supports voice capture, and autosaves every answer so the AI always has accurate context.",
     highlights: [
       "Expand each category (Basics, Product, Metrics, Background, Achievements, Expertise) and answer the structured prompts.",
-      "Toggle Voice Mode from the Profile Intelligence card to speak your answers while Muse transcribes.",
-      "Muse autosaves to Supabase as you type, so you never lose progress even if you refresh.",
+      "Toggle Voice Mode from the Profile Intelligence card to speak your answers while hermes transcribes.",
+      "hermes autosaves to Supabase as you type, so you never lose progress even if you refresh.",
     ],
     ctaLabel: "Open Personal Info",
     ctaHref: "/dashboard/personal-info",
@@ -336,7 +336,7 @@ const steps: DocumentationStep[] = [
     title: "Follow inspiring creators",
     summary: "Curate a bench of voices that fuel your prompts and swipe files.",
     description:
-      "Head to the Creators tab to search, filter by Following or Discover, and follow/unfollow without losing your place. Muse only surfaces posts from the people you follow in the Create canvas.",
+      "Head to the Creators tab to search, filter by Following or Discover, and follow/unfollow without losing your place. hermes only surfaces posts from the people you follow in the Create canvas.",
     highlights: [
       "Use search plus All / Following / Discover filters to explore the roster.",
       "Follow creators inline; we optimistically update the button and roll back if the API fails.",
@@ -357,7 +357,7 @@ const steps: DocumentationStep[] = [
     highlights: [
       "Paste a LinkedIn URL into \"Add New Creator\" to scrape their profile and posts.",
       "Toggle All / Bangers / Mid to study performance vs. each creator's average reactions.",
-      "Scroll and we'll auto-load more posts; Muse also shows how many creators and posts are in the library.",
+      "Scroll and we'll auto-load more posts; hermes also shows how many creators and posts are in the library.",
     ],
     ctaLabel: "Open Content Library",
     ctaHref: "/dashboard/content",
@@ -385,11 +385,11 @@ const steps: DocumentationStep[] = [
   {
     id: "context",
     title: "Pick a creation mode & share context",
-    summary: "Decide how similar you want the remix and answer Muse's follow-up questions.",
+    summary: "Decide how similar you want the remix and answer hermes's follow-up questions.",
     description:
-      "After you highlight posts, Muse opens a Choice Modal. Use the similarity slider, then either jump straight to generation or open the Context Gathering flow, which supports voice mode and averages ~5 questions.",
+      "After you highlight posts, hermes opens a Choice Modal. Use the similarity slider, then either jump straight to generation or open the Context Gathering flow, which supports voice mode and averages ~5 questions.",
     highlights: [
-      "Use the 0-100% similarity slider to tell Muse how closely the draft should mirror the source.",
+      "Use the 0-100% similarity slider to tell hermes how closely the draft should mirror the source.",
       "Choose \"Use as inspiration\" to answer personalized questions with text or voice input.",
       "Need speed? Hit \"No custom needed\" or skip questions - we'll still remix the highlighted post.",
     ],
@@ -471,11 +471,11 @@ export default function DocumentationPage() {
         </div>
         <div className="relative flex flex-col md:flex-row gap-10 items-center md:items-start">
           <div className="flex-1">
-            <p className="uppercase tracking-[0.35em] text-xs text-gray-400">Muse playbook</p>
+            <p className="uppercase tracking-[0.35em] text-xs text-gray-400">hermes playbook</p>
             <h1 className="text-5xl font-semibold mt-2 text-gray-900">Documentation</h1>
             <p className="mt-4 text-gray-600 max-w-2xl leading-relaxed text-lg">
               Follow the exact path our power creators take. Each step unlocks a panel in the product,
-              so you can tune Muse to your voice, gather the right inspiration, and ship polished drafts in minutes.
+              so you can tune hermes to your voice, gather the right inspiration, and ship polished drafts in minutes.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
@@ -592,7 +592,7 @@ export default function DocumentationPage() {
                   </div>
                   <div className="rounded-2xl border border-blue-100 bg-blue-50/70 p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div>
-                      <p className="text-sm text-blue-600 font-semibold">Do it inside Muse</p>
+                      <p className="text-sm text-blue-600 font-semibold">Do it inside hermes</p>
                       <p className="text-sm text-blue-500 mt-1 leading-relaxed">
                         {step.ctaLabel}. We&apos;ll keep your progress synced to your workspace automatically.
                       </p>
@@ -615,7 +615,7 @@ export default function DocumentationPage() {
           <div className="px-8 py-6 border-b border-gray-100 flex items-center justify-between gap-4">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-gray-400">Live preview</p>
-              <p className="text-sm text-gray-600 mt-1">What this step looks like inside Muse</p>
+              <p className="text-sm text-gray-600 mt-1">What this step looks like inside hermes</p>
             </div>
             <span className="text-[11px] font-mono text-gray-500 bg-white border border-gray-200 px-3 py-1 rounded-full shadow-sm">
               {activeStep?.id}

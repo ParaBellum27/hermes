@@ -44,12 +44,12 @@ export default function Login() {
           <div className="flex items-center justify-center gap-2">
             <Image
               src="/logo.png"
-              alt="Muse logo"
+              alt="hermes logo"
               width={36}
               height={36}
               className="shrink-0 rounded-lg"
             />
-            <h1 className="text-3xl font-bold text-gray-900">Muse</h1>
+            <h1 className="text-3xl font-bold text-gray-900">hermes</h1>
           </div>
           <CardTitle className="text-center">Sign in</CardTitle>
         </CardHeader>

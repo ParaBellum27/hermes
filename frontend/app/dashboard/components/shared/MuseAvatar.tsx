@@ -1,17 +1,17 @@
 /**
- * MuseAvatar - Animated avatar for the Muse AI Assistant
+ * hermesAvatar - Animated avatar for the hermes AI Assistant
  */
 "use client";
 
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-interface MuseAvatarProps {
+interface hermesAvatarProps {
   isActive?: boolean;
   size?: "sm" | "md" | "lg";
 }
 
-export function MuseAvatar({ isActive = false, size = "md" }: MuseAvatarProps) {
+export function hermesAvatar({ isActive = false, size = "md" }: hermesAvatarProps) {
   const sizeClasses = {
     sm: "h-20 w-20",
     md: "h-28 w-28",
@@ -35,11 +35,11 @@ export function MuseAvatar({ isActive = false, size = "md" }: MuseAvatarProps) {
       />
 
 
-      {/* Muse Logo */}
+      {/* hermes Logo */}
       <div className="absolute inset-0 flex items-center justify-center z-10">
         <Image
           src="/logo.png"
-          alt="Muse"
+          alt="hermes"
           width={logoSizes[size]}
           height={logoSizes[size]}
           className="transition-all duration-300 rounded-xl"

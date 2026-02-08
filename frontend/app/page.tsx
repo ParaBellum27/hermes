@@ -33,7 +33,7 @@ const navLinks = [
 const walkthrough = [
   {
     title: "Drop URLs",
-    description: "Add the LinkedIn creators you trust so Muse can pull their posts.",
+    description: "Add the LinkedIn creators you trust so hermes can pull their posts.",
     icon: LinkIcon,
     href: "#workspace",
   },
@@ -145,12 +145,12 @@ export default function Home() {
             <div className="flex items-center gap-2">
               <Image
                 src="/logo.png"
-                alt="Muse"
+                alt="hermes"
                 width={40}
                 height={40}
                 className="h-9 w-9 rounded-xl border border-slate-200 bg-white p-1 shadow-sm"
               />
-              <div className="text-lg font-semibold tracking-tight text-slate-900">Muse</div>
+              <div className="text-lg font-semibold tracking-tight text-slate-900">hermes</div>
             </div>
             <div className="hidden items-center gap-1 rounded-xl bg-slate-100/80 p-1 shadow-inner shadow-slate-200 sm:flex">
               {navLinks.map((item) => {
@@ -172,7 +172,7 @@ export default function Home() {
                 href="/login"
                 className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-md shadow-slate-300 transition hover:-translate-y-[1px] hover:shadow-lg"
               >
-                Launch Muse
+                Launch hermes
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
@@ -224,7 +224,7 @@ export default function Home() {
                 <div className="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
                   <div className="text-xs uppercase tracking-wide text-slate-500">Customer proof</div>
                   <p className="mt-1 text-slate-800">
-                    “Muse turned my swipe file into 3 ready posts in under 20 minutes—and one booked two demos.”
+                    “hermes turned my swipe file into 3 ready posts in under 20 minutes—and one booked two demos.”
                   </p>
                   <div className="mt-2 text-xs font-semibold text-slate-500">CMO, B2B SaaS</div>
                 </div>
@@ -270,7 +270,7 @@ export default function Home() {
                 <div className="flex items-center justify-between border-b border-slate-200 px-5 py-4">
                   <div className="flex items-center gap-2">
                     <Sparkles className="h-4 w-4 text-sky-600" />
-                    <span className="text-sm font-semibold text-slate-700">Muse workspace</span>
+                    <span className="text-sm font-semibold text-slate-700">hermes workspace</span>
                   </div>
                   <div className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">
                     Product preview
@@ -408,7 +408,7 @@ export default function Home() {
           <section id="walkthrough" className="mt-16 space-y-6">
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-3xl font-semibold tracking-tight text-slate-900">Walkthrough: how Muse works</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-slate-900">Walkthrough: how hermes works</h2>
                 <p className="mt-1 text-slate-600">Drop URLs → Analyze winners → Draft with AI → Publish with proof.</p>
               </div>
               <span className="hidden rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-600 ring-1 ring-slate-200 sm:inline-flex">
@@ -605,7 +605,7 @@ export default function Home() {
                   <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-600 ring-1 ring-slate-200">
                     Ready today
                   </div>
-                  <h3 className="text-3xl font-semibold text-slate-900">See Muse in your own workflow</h3>
+                  <h3 className="text-3xl font-semibold text-slate-900">See hermes in your own workflow</h3>
                   <p className="text-slate-600">
                     Add a creator, pull their feed, and ship a rewritten post in minutes. The homepage now mirrors the
                     product you&apos;ll use every day.

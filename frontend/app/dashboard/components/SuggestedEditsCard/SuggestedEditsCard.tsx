@@ -45,11 +45,11 @@ export function SuggestedEditsCard({ className, vm, onAcceptEdit }: SuggestedEdi
               />
             )}
 
-            {/* Muse Logo */}
+            {/* hermes Logo */}
             <div className="absolute inset-0 flex items-center justify-center p-5">
               <Image
                 src="/logo.png"
-                alt="Muse"
+                alt="hermes"
                 width={40}
                 height={40}
                 className={cn(
@@ -65,7 +65,7 @@ export function SuggestedEditsCard({ className, vm, onAcceptEdit }: SuggestedEdi
 
           {/* Text */}
           <div className="text-center">
-            <CardTitle className="text-lg font-semibold">Muse - AI Assistant</CardTitle>
+            <CardTitle className="text-lg font-semibold">hermes - AI Assistant</CardTitle>
             {vm.isAiActive && (
               <p className="text-sm text-muted-foreground mt-0.5">
                 ✨ Working on it...

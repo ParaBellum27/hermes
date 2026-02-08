@@ -1,6 +1,6 @@
 # Database Migrations
 
-This directory contains SQL migrations for the Muse database schema.
+This directory contains SQL migrations for the hermes database schema.
 
 ## Running Migrations
 
