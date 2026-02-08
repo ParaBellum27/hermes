@@ -1,6 +1,6 @@
 from typing import List, Optional
 from supabase import Client
-from pyrewrite.models import CreatorProfile
+from app.models import CreatorProfile
 
 class CreatorRepository:
     def __init__(self, supabase_client: Client):

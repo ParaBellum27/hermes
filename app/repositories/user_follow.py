@@ -8,12 +8,13 @@ class UserFollowRepository:
 
     async def find_by_user_id_with_profiles(self, user_id: str) -> List[CreatorProfile]:
         # Perform the join with creator_profiles
-        response = self.supabase 
+        response = (self.supabase 
             .from_('user_follows') 
             .select('creator_id, created_at, creator_profiles(*)') 
             .eq('user_id', user_id) 
             .order('created_at', desc=True) 
             .execute()
+        )
 
         if response.data:
             creators = []

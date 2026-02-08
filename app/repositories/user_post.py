@@ -25,24 +25,26 @@ class UserPostRepository:
         return UserPost(**mapped_data)
 
     async def find_by_user_id(self, user_id: str) -> List[UserPost]:
-        response = self.supabase 
+        response = (self.supabase 
             .from_("user_posts") 
             .select("*") 
             .eq("user_id", user_id) 
             .order("updated_at", desc=True) 
             .execute()
+        )
 
         if response.data:
             return [self._map_row_to_user_post(item) for item in response.data]
         return []
 
     async def find_by_id(self, post_id: str) -> Optional[UserPost]:
-        response = self.supabase 
+        response = (self.supabase 
             .from_("user_posts") 
             .select("*") 
             .eq("post_id", post_id) 
             .maybe_single() 
             .execute()
+        )
 
         if response.data:
             return self._map_row_to_user_post(response.data)
@@ -56,12 +58,13 @@ class UserPostRepository:
         if status:
             payload["status"] = status
 
-        response = self.supabase 
+        response = (self.supabase 
             .from_("user_posts") 
             .insert(payload) 
             .select("*") 
             .single() 
             .execute()
+        )
 
         if response.data:
             return self._map_row_to_user_post(response.data)
@@ -77,23 +80,25 @@ class UserPostRepository:
             payload["status"] = status
         payload["updated_at"] = datetime.now().isoformat() # Update timestamp
 
-        response = self.supabase 
+        response = (self.supabase 
             .from_("user_posts") 
             .update(payload) 
             .eq("post_id", post_id) 
             .select("*") 
             .single() 
             .execute()
+        )
         
         if response.data:
             return self._map_row_to_user_post(response.data)
         raise Exception("Failed to update post")
 
     async def delete(self, post_id: str) -> None:
-        response = self.supabase 
+        response = (self.supabase 
             .from_("user_posts") 
             .delete() 
             .eq("post_id", post_id) 
             .execute()
+        )
         if response.count is None: # indicates an error or no row found/deleted
              raise Exception("Failed to delete post or no record found")

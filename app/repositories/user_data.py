@@ -8,13 +8,14 @@ class UserDataRepository:
 
     async def find_by_user_id_and_key(self, user_id: str, key: str) -> Optional[Dict[str, Any]]:
         # print(f"[UserDataRepository] Query: userId={user_id}, key={key}")
-        response = self.supabase 
+        response = (self.supabase 
             .from_("user_data") 
             .select("data") 
             .eq("user_id", user_id) 
             .eq("key", key) 
             .maybe_single() 
             .execute()
+        )
 
         # print(f"[UserDataRepository] Result:", {"data": response.data})
 
